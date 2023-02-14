@@ -101,6 +101,11 @@ module.exports = {
             position: 'before',
           },
           {
+            pattern: '@/constants/**',
+            group: 'parent',
+            position: 'before',
+          },
+          {
             pattern: '@/libs/**',
             group: 'parent',
             position: 'before',
