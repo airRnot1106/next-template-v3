@@ -2,7 +2,7 @@ import { RouterContext } from 'next/dist/shared/lib/router-context';
 
 import * as NextImage from 'next/image';
 
-import '@/styles/globals.css';
+import '@/app/globals.css';
 
 const OriginalNextImage = NextImage.default;
 
