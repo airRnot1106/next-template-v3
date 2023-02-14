@@ -101,6 +101,12 @@ module.exports = {
         prefer: 'type-imports',
       },
     ],
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['./*', '../*', '~/*', '~~/*'],
+      },
+    ],
     /* tailwindcss */
     'tailwindcss/no-custom-classname': [
       'warn',
