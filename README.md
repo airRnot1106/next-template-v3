@@ -1,4 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<samp>
+
+# Next-Template-V3
+
+</samp>
+</div>
+
+## Content
+
+- Next.js 13
+- Strictest TypeScript
+- ESLint
+- Prettier
+- TailwindCSS
+- daisyUI
+- Jotai
+- Storybook
+- Vitest
+- zod
+- lucide-react
+- uuid
+- use-media
 
 ## Getting Started
 
@@ -14,25 +36,61 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Rules
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Directory Structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+src/
+├── __tests__
+│   └── setup.ts
+├── app
+│   ├── globals.css
+│   ├── head.tsx
+│   ├── layout.tsx
+│   └── page.tsx
+├── components
+│   ├── base # generic ui
+│   │   ├── atoms
+│   │   │   ├── Button.tsx
+│   │   │   └── Button.stories.tsx
+│   │   └── molecules
+│   ├── feature # domain
+│   │   └── user
+│   │       ├── atoms
+│   │       │   ├── UserButton.tsx # naming follows BCD Design
+│   │       │   └── UserButton.stories.tsx
+│   │       ├── molecules
+│   │       ├── hooks # local hook
+│   │       ├── user.constants.ts # local constants
+│   │       └── user.types.ts # local types
+│   ├── functional
+│   └── page
+├── constants # generic constants
+│   └── media.ts
+├── hooks # generic constants
+│   └── useMedia.ts
+├── libs # library setting
+├── providers
+├── stores # jotai
+├── types # generic types
+└── utils # generic utilities
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Dependence
 
-## Learn More
+<div align="center">
+<img src="https://user-images.githubusercontent.com/62370527/218809396-f67603b8-b26a-4e9c-8827-133a2d1952e3.png" alt="" title="image of dependence">
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+Dependency rules between directories. If it's below you or next to you, you can import it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Stores are used within feature and cannot be used within base or functional.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Reference
 
-## Deploy on Vercel
+https://tech-blog.rakus.co.jp/entry/20230208/frontend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+https://zenn.dev/yoshiko/articles/99f8047555f700
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://qiita.com/misuken/items/19f9f603ab165e228fe1
