@@ -39,9 +39,12 @@
   "cSpell.words": [
     "classname",
     "daisyui",
+    "lucide",
     "nonconstructor",
     "parens",
-    "tailwindcss"
+    "postcss",
+    "tailwindcss",
+    "unoptimized"
   ],
 
   // TypeScriptの設定
